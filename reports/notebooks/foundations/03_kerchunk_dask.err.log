@@ -44,8 +44,6 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# Input URL to dataset. Note this is a netcdf file stored on s3 (cloud dataset).', 'url = "s3://wrf-se-ak-ar5/ccsm/rcp85/daily/2060/WRFDS_2060-01-01.nc"', '', '', '# Create a virtual dataset using VirtualiZarr.']
-...
-['virtual_ds = open_virtual_dataset(', '    url, indexes={}, reader_options={"storage_options": storage_options}', ')', '# Write the virtual dataset to disk as a Kerchunk JSON. We could alternative write to a Kerchunk JSON or Icechunk Store.', 'virtual_ds.virtualize.to_kerchunk("single_file_kerchunk.json", format="json")']
+dask.compute(*tasks)
 -------------------
 

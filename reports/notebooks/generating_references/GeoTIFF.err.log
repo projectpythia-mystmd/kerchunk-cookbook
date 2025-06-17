@@ -46,8 +46,6 @@ virtual_datasets = dask.compute(*tasks)
 ----- stderr -----
 /home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/readers/tiff.py:47: UserWarning: storage_options have been dropped from reader_options as they are not supported by kerchunk.tiff.tiff_to_zarr
   warnings.warn(
-/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/readers/tiff.py:47: UserWarning: storage_options have been dropped from reader_options as they are not supported by kerchunk.tiff.tiff_to_zarr
-  warnings.warn(
 ----- stderr -----
 /home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/readers/tiff.py:47: UserWarning: storage_options have been dropped from reader_options as they are not supported by kerchunk.tiff.tiff_to_zarr
   warnings.warn(
@@ -62,13 +60,15 @@ virtual_datasets = dask.compute(*tasks)
   warnings.warn(
 /home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/readers/tiff.py:47: UserWarning: storage_options have been dropped from reader_options as they are not supported by kerchunk.tiff.tiff_to_zarr
   warnings.warn(
+/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/readers/tiff.py:47: UserWarning: storage_options have been dropped from reader_options as they are not supported by kerchunk.tiff.tiff_to_zarr
+  warnings.warn(
 ----- stderr -----
-2025-06-17 19:16:23,550 - distributed.worker - ERROR - Compute Failed
-Key:       generate_virtual_dataset-e58652ee-3f53-4186-bfec-a1ffd22a9ddd
+2025-06-17 19:16:42,909 - distributed.worker - ERROR - Compute Failed
+Key:       generate_virtual_dataset-f5fb81b9-a275-47f5-b61a-899284f8a6e9
 State:     executing
-Task:  <Task 'generate_virtual_dataset-e58652ee-3f53-4186-bfec-a1ffd22a9ddd' generate_virtual_dataset(...)>
+Task:  <Task 'generate_virtual_dataset-f5fb81b9-a275-47f5-b61a-899284f8a6e9' generate_virtual_dataset(...)>
 Exception: 'NotImplementedError("Doesn\'t support slicing with (None, slice(None, None, None))")'
-Traceback: '  File "/tmp/ipykernel_4875/4131322973.py", line 17, in generate_virtual_dataset\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/xarray/core/dataset.py", line 4568, in expand_dims\n    variables[k] = v.set_dims(dict(all_dims))\n                   ~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/xarray/util/deprecation_helpers.py", line 143, in wrapper\n    return func(*args, **kwargs)\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/xarray/core/variable.py", line 1395, in set_dims\n    expanded_data = self.data[indexer]\n                    ~~~~~~~~~^^^^^^^^^\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/manifests/array.py", line 226, in __getitem__\n    raise NotImplementedError(f"Doesn\'t support slicing with {indexer}")\n'
+Traceback: '  File "/tmp/ipykernel_4853/4131322973.py", line 17, in generate_virtual_dataset\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/xarray/core/dataset.py", line 4568, in expand_dims\n    variables[k] = v.set_dims(dict(all_dims))\n                   ~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/xarray/util/deprecation_helpers.py", line 143, in wrapper\n    return func(*args, **kwargs)\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/xarray/core/variable.py", line 1395, in set_dims\n    expanded_data = self.data[indexer]\n                    ~~~~~~~~~^^^^^^^^^\n  File "/home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/manifests/array.py", line 226, in __getitem__\n    raise NotImplementedError(f"Doesn\'t support slicing with {indexer}")\n'
 
 /home/runner/micromamba/envs/kerchunk-cookbook/lib/python3.13/site-packages/virtualizarr/readers/tiff.py:47: UserWarning: storage_options have been dropped from reader_options as they are not supported by kerchunk.tiff.tiff_to_zarr
   warnings.warn(
